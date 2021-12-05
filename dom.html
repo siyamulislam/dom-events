@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Explorer</title>
+    <style>article{
+        border: 2PX SOLID blue;
+        border-radius: 20px;
+        padding: 10px;
+        margin: 20px;
+
+}
+.special{
+    background-color: rgb(183, 229, 153)
+}
+        </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h3 id="1">Exploring Dom</h3>
+            <p>Lorem ipsum dolor sit amen consectetur adipisicing elit. Est, eaque!</p>
+            <article id="first-art">
+                <h3 class="art">article-1</h3>
+                <p class="dec">Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellat nobis ipsa excepturi iusto officia corrupti ex praesentium cumque neque, sit beatae sequi quos iure reiciendis tempore, aut debitis. Consectetur, obcaecati.</p>
+            </article>
+            <article class="special">
+                <h3 class="art">article-2</h3>
+                <p class="dec">Ratione omnis voluptates a optio laborum libero ipsum mollitia eligendi? Qui ipsa sed placeat ullam adipisci praesentium doloribus ratione at sint! Assumenda unde odio nulla quo numquam, est vel iusto.</p>
+            </article>
+            <article>
+                <h3 class="art">article-3</h3>
+                <p class="dec">Debitis asperiores earum sint fuga maxime quos iure illum suscipit modi, odit ad animi exercitationem et sit quaerat quibusdam pariatur nihil magnam sequi ut saepe, at incidunt ullam? Possimus, laboriosam!</p>
+            </article>
+        </section>
+        <script>console.log(document.body)
+
+        const article = document.getElementById("first-art")
+        const newP = document.createElement('p')
+        newP.innerHTML="the golpo is END by JS"
+        article.appendChild(newP)
+
+
+        document.getElementById(1).style.color="blue"
+        var description=document.getElementsByClassName('dec')
+        var author=document.getElementsByClassName('art')
+        for (let index = 0; index < author.length; index++) {
+            const element = author[index];
+            element.innerHTML="Golpo-"+index+1
+            console.log(element.innerHTML)
+            element.style.backgroundColor='lightGreen';
+            element.style.padding="10px" 
+        }
+        </script>
+    </main>
+</body>
+</html>

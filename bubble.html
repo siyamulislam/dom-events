@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bubble Shoot</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <button id="addNew">Add New</button>
+        <ul id="myList">
+            <li id="item1" class="item">Lorem, ipsum dolor.</li>
+            <li id="item2" class="item">Impedit, officiis eaque.</li>
+            <li id="item3" class="item">Quae, deserunt ratione.</li>
+            <li id="item4" class="item">Iusto, quaerat corporis?</li>
+            <li id="item5" class="item">Accusamus, unde commodi.</li>
+        </ul>
+     
+    </div>
+
+    <script>
+        // document.getElementById("item1").addEventListener("click",function(){
+        //     console.log("item1");
+        //     event.stopPropagation()
+        //     // event.stopImmediatePropagation()
+        // })
+        // document.getElementById("myList").addEventListener("click",function(){
+        //     console.log("myList");
+
+        //     event.stopPropagation()
+        //     // event.stopImmediatePropagation()
+        // })
+        // document.getElementById("container").addEventListener("click",function(){
+        //     console.log("container");
+        // })
+            // item delete by class name
+        // var list =  document.getElementsByClassName("item")
+        // for (let index = 0; index < list.length; index++) {
+        //     const element = list[index];
+        //     element.addEventListener("click",function(){
+        //         event.target.parentNode.removeChild( event.target)
+        //     })
+        // }
+
+
+        document.getElementById("addNew").addEventListener("click",function(event){
+            var itemParent = document.getElementById("myList")
+            var newItem =document.createElement("li")
+            
+            var num=Math.round(Math.random()*6) 
+            newItem.innerText="Hey This is new ITem! Price: "+num+"$"
+            newItem.className="item"
+                itemParent.appendChild(newItem)
+        })
+         document.getElementById("myList").addEventListener("click",function(){
+            console.log(this, event.target);
+            event.target.parentNode.removeChild( event.target)
+
+        })
+
+    </script>
+</body>
+</html>

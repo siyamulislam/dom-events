@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events
+
+    </title>
+</head>
+
+<body>
+    <h1 onclick=" console.log(46)">Events Explorer</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Magni molestias consequuntur eos, ea repellendus optio velit aliquid praesentium vero accusamus necessitatibus eligendi, corrupti nihil fugit repudiandae, nemo non maxime tenetur?</p>
+    <button onclick="btnClick()">Click me</button>
+    <button id="btn1">Click me-1</button>
+    <button id="btn2">Click me-2</button>
+    <button id="btn3">Click me-3</button>
+    <script>
+        function btnClick() {
+            console.log("amare kisu daw na !");
+        }
+        var btn1 = document.getElementById("btn1")
+        btn1.addEventListener("click",colorShit)
+        var btn2 = document.getElementById("btn2")
+        btn2.onclick = function () {
+           document.body.style.backgroundColor="lightGreen"
+        }
+        var btn3 = document.getElementById("btn3")
+        btn3.onclick = function () {
+           
+            document.body.style.color="white"
+        }
+        function colorShit() {
+           document.body.style.backgroundColor="lightgray"
+        }
+
+    </script>
+</body>
+
+</html>
